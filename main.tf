@@ -18,14 +18,15 @@ terraform {
 
 provider "azurerm" {
   features {}
+    subscription_id = var.subscription_id
   use_oidc = true
 }
 
 # Define any Azure resources to be created here. A simple resource group is shown here as a minimal example.
-resource "azurerm_resource_group" "rg-aks" {
-  name     = var.resource_group_name
-  location = var.location
-}
+#resource "azurerm_resource_group" "rg-aks" {
+#  name     = var.resource_group_name
+#  location = var.location
+#}
 
 data "azurerm_resource_group" "main" {
   name = var.resource_group_name
