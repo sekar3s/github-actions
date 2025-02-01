@@ -2,6 +2,8 @@ name: 'Terraform Unit Tests'
 
 on:
   push:
+    branches:
+    - test
   workflow_dispatch:
 
 permissions:
