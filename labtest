@@ -1,6 +1,5 @@
 data "azurerm_resource_group" "main" {
   name = var.resource_group_name
-  location = var.location
 }
 
 resource "azurerm_kubernetes_cluster" "example" {
@@ -33,6 +32,5 @@ output "client_certificate" {
 
 output "kube_config" {
   value = azurerm_kubernetes_cluster.example.kube_config_raw
-
   sensitive = true
 }
